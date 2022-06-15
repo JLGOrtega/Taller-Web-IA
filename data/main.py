@@ -18,7 +18,8 @@ if menu == "Home":
     st.caption("(Hacer click en las opciones para ver mas detalles)**")
 
     with st.expander("- Speller"):
-        st.write("""Esta app nos permite corregir errores de spelling en palabras/frases (solo en ingles!).""")
+        st.write("""Esta app nos permite corregir errores de spelling en palabras/frases 
+                    (solo en ingles!).""")
 
     with st.expander("- Captioner"):
         st.write("""Esta app nos permite obtener una breve descripcion de la palabra seleccionada.""")
@@ -35,6 +36,7 @@ elif menu=="Speller":
         if sentence is not None:
             sentence = TextBlob(sentence).correct()
             st.text(f"La frase corregida es: {sentence}")
+            
 elif menu=="Captioner":
     st.subheader("Classifier")
     #title = st.text_input('Ruta a la imagen:', 'Add route')
